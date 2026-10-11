@@ -3,23 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nouman Naseer — Tools & Websites</title>
-<meta name="description" content="Nouman Naseer builds custom tools that save teams time and fast, clean websites that bring in customers.">
+<title>Nouman Naseer | Custom Tools & Website Development</title>
+<meta name="description" content="Nouman Naseer is a full-stack developer who builds custom business tools, CRMs, POS systems and fast, professional websites.">
+<meta property="og:title" content="Nouman Naseer | Custom Tools & Website Development">
+<meta property="og:description" content="Custom business tools and professional websites, built to fit how you work.">
+<meta property="og:image" content="assets/nouman.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#17202E;
-    --steel:#56657A;
-    --fog:#E6EAEE;
-    --paper:#F7F8FA;
+    --ink:#16202D;
+    --ink-2:#223044;
+    --steel:#566479;
+    --mist:#AEB9C8;
+    --fog:#E8ECF0;
+    --paper:#F6F7F9;
     --signal:#F2C230;
-    --signal-deep:#C99A0C;
-    --line:#CBD3DC;
+    --signal-deep:#B98C08;
+    --line:#D3DAE2;
+    --wa:#25D366;
     --display:"Bricolage Grotesque", system-ui, sans-serif;
     --body:"Instrument Sans", system-ui, sans-serif;
-    --wrap:1180px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -27,79 +32,56 @@
   img{max-width:100%;display:block}
   a{color:inherit}
   :focus-visible{outline:3px solid var(--signal-deep);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
-  h2{font-size:clamp(2rem,4.5vw,3.25rem);font-weight:700;max-width:18ch}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);line-height:1.06;letter-spacing:-.02em}
+  h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:700;max-width:20ch}
   .lede{color:var(--steel);max-width:58ch;margin-top:16px;font-size:1.125rem}
-  section{padding:112px 0}
+  section{padding:108px 0}
+  .kicker{display:inline-block;font-weight:600;color:var(--signal-deep);margin-bottom:14px}
 
-  /* nav */
-  header{position:sticky;top:0;z-index:20;background:rgba(247,248,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px}
-  .brand-mark{width:28px;height:28px;border-radius:7px;background:var(--ink);display:grid;place-items:center}
-  .brand-mark span{width:12px;height:12px;background:var(--signal);border-radius:2px;transform:rotate(45deg)}
-  .nav ul{display:flex;gap:32px;list-style:none;align-items:center}
-  .nav ul a{text-decoration:none;font-weight:500;color:var(--steel)}
-  .nav ul a:hover{color:var(--ink)}
-  .btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem var(--body);text-decoration:none;padding:13px 22px;border-radius:10px;border:2px solid var(--ink);cursor:pointer;transition:background .15s,color .15s}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem var(--body);text-decoration:none;padding:14px 24px;border-radius:12px;border:2px solid var(--ink);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
   .btn-solid{background:var(--ink);color:#fff}
-  .btn-solid:hover{background:#000}
+  .btn-solid:hover{background:#000;border-color:#000}
   .btn-ghost{background:transparent;color:var(--ink)}
   .btn-ghost:hover{background:var(--ink);color:#fff}
-  .nav .btn{padding:9px 16px}
-  .menu-toggle{display:none;background:none;border:0;font:600 1rem var(--body);cursor:pointer;padding:8px}
+  .btn-wa{background:var(--wa);border-color:var(--wa);color:#08311A}
+  .btn-wa:hover{background:#1EBE5A;border-color:#1EBE5A}
 
-  /* hero */
-  .hero{padding:88px 0 96px}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(2.6rem,6.2vw,5rem);font-weight:800}
-  .hero p.lede{font-size:1.2rem}
-  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
-  .availability{display:inline-flex;align-items:center;gap:10px;font-weight:500;color:var(--steel);margin-bottom:28px}
-  .availability i{width:10px;height:10px;border-radius:50%;background:#2FA84F;box-shadow:0 0 0 4px rgba(47,168,79,.18)}
+  header{position:sticky;top:0;z-index:30;background:rgba(246,247,249,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-family:var(--display);font-weight:800;font-size:1.22rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .brand-mark{width:30px;height:30px;border-radius:8px;background:var(--ink);display:grid;place-items:center;color:var(--signal);font-size:.95rem;font-weight:800}
+  .nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  .nav ul a{text-decoration:none;font-weight:500;color:var(--steel)}
+  .nav ul a:hover{color:var(--ink)}
+  .nav ul .btn{padding:9px 16px;color:#fff}
+  .menu-toggle{display:none;background:none;border:0;font:600 1rem var(--body);cursor:pointer;padding:8px;color:var(--ink)}
 
-  /* the switch: the one memorable thing */
-  .bench{background:var(--ink);color:#fff;border-radius:22px;padding:22px;position:relative}
-  .switch{display:grid;grid-template-columns:1fr 1fr;background:#273245;border-radius:12px;padding:4px;position:relative}
-  .switch button{position:relative;z-index:1;background:none;border:0;color:#AEB9C8;font:600 .98rem var(--body);padding:11px 8px;cursor:pointer;border-radius:9px;transition:color .2s}
-  .switch button[aria-selected="true"]{color:var(--ink)}
-  .switch .knob{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--signal);border-radius:9px;transition:transform .35s cubic-bezier(.6,.05,.25,1)}
-  .bench[data-mode="web"] .knob{transform:translateX(100%)}
-  .screen{margin-top:18px;background:#0F1621;border-radius:14px;min-height:300px;padding:22px;overflow:hidden;position:relative}
-  .panel{display:none}
-  .panel.on{display:block;animation:swap .4s ease}
-  @keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  /* tools panel: a before/after of a manual task */
-  .task{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:10px;background:#1A2433;margin-bottom:8px;font-size:.95rem}
-  .task s{color:#7D8A9C}
-  .task b{font-weight:600;color:var(--signal)}
-  .saved{margin-top:16px;padding-top:16px;border-top:1px dashed #33405A;display:flex;align-items:baseline;justify-content:space-between}
-  .saved{gap:16px}
-  .saved strong{font-family:var(--display);font-size:2.4rem;color:#fff;white-space:nowrap}
-  .saved span{color:#AEB9C8;font-size:.95rem}
-  /* web panel: a mini browser */
-  .browser{background:#fff;border-radius:10px;overflow:hidden;color:var(--ink)}
-  .browser-bar{display:flex;gap:6px;align-items:center;padding:10px 12px;background:var(--fog)}
-  .browser-bar i{width:9px;height:9px;border-radius:50%;background:#B9C2CD}
-  .browser-bar em{font-style:normal;font-size:.8rem;color:var(--steel);margin-left:10px;background:#fff;padding:2px 10px;border-radius:6px;flex:1}
-  .browser-body{padding:20px}
-  .mock-h{height:16px;width:70%;background:var(--ink);border-radius:4px}
-  .mock-p{height:8px;background:var(--line);border-radius:4px;margin-top:10px}
-  .mock-btn{display:inline-block;margin-top:16px;height:26px;width:96px;background:var(--signal);border-radius:6px}
-  .mock-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
-  .mock-row div{height:46px;background:var(--fog);border-radius:6px}
-  .scores{display:flex;gap:10px;margin-top:14px}
-  .score{flex:1;text-align:center;background:#1A2433;border-radius:10px;padding:10px 4px}
-  .score b{display:block;font-family:var(--display);font-size:1.5rem;color:#5BD17A}
-  .score span{font-size:.78rem;color:#AEB9C8}
+  .hero{padding:72px 0 100px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+  .availability{display:inline-flex;align-items:center;gap:10px;font-weight:500;color:var(--steel);margin-bottom:26px;background:#fff;border:1px solid var(--line);padding:7px 14px 7px 12px;border-radius:999px;font-size:.95rem}
+  .availability i{width:9px;height:9px;border-radius:50%;background:#2FA84F;box-shadow:0 0 0 4px rgba(47,168,79,.18)}
+  .hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:800}
+  .hero .lede{font-size:1.2rem}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+  .proof{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;gap:40px;flex-wrap:wrap}
+  .proof div{min-width:120px}
+  .proof strong{display:block;font-family:var(--display);font-size:1.15rem;font-weight:700}
+  .proof span{color:var(--steel);font-size:.95rem}
 
-  /* services */
+  .portrait{position:relative;justify-self:end;width:100%;max-width:430px;isolation:isolate}
+  .portrait::before{content:"";position:absolute;inset:28px -28px -28px 28px;background:var(--ink);border-radius:28px;z-index:-1}
+  .portrait::after{content:"";position:absolute;width:110px;height:110px;right:-48px;top:-28px;background:var(--signal);border-radius:24px;z-index:-2}
+  .portrait img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;width:100%;height:auto}
+  .name-card{position:absolute;left:-36px;bottom:36px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -18px rgba(22,32,45,.45);border:1px solid var(--line)}
+  .name-card strong{display:block;font-family:var(--display);font-size:1.1rem}
+  .name-card span{color:var(--steel);font-size:.9rem}
+
   .services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:56px;border:2px solid var(--ink);border-radius:20px;overflow:hidden}
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;border:2px solid var(--ink);border-radius:22px;overflow:hidden}
   .svc{padding:44px}
   .svc + .svc{border-left:2px solid var(--ink)}
-  .svc-ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:var(--signal);margin-bottom:24px}
+  .svc-ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--signal);margin-bottom:24px}
   .svc h3{font-size:2rem;font-weight:700}
   .svc > p{color:var(--steel);margin-top:12px;max-width:46ch}
   .svc ul{list-style:none;margin-top:28px}
@@ -107,98 +89,121 @@
   .svc li svg{margin-top:4px}
   .svc li strong{display:block;font-weight:600}
   .svc li span{color:var(--steel);font-size:.97rem}
-  .svc-foot{margin-top:24px;padding:16px 18px;background:var(--fog);border-radius:12px;font-size:.97rem}
 
-  /* work */
-  .work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-  .filters{display:flex;gap:8px}
-  .filters button{font:600 .95rem var(--body);padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--steel);cursor:pointer}
-  .filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-  .project{display:flex;flex-direction:column}
-  .project[hidden]{display:none}
-  .thumb{aspect-ratio:4/3;border-radius:16px;background:var(--fog);position:relative;overflow:hidden;border:1px solid var(--line)}
-  .thumb svg{position:absolute;inset:0;width:100%;height:100%}
-  .tag{display:inline-block;margin-top:18px;font-size:.85rem;font-weight:600;color:var(--steel)}
-  .project h3{font-size:1.4rem;font-weight:700;margin-top:4px}
-  .project p{color:var(--steel);margin-top:8px;font-size:.98rem}
-  .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-  .stack span{font-size:.82rem;padding:3px 10px;border-radius:6px;background:#fff;border:1px solid var(--line)}
+  .projects{display:grid;gap:40px;margin-top:56px}
+  .project{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}
+  .project:nth-child(even) .shot{order:2}
+  .shot{display:block;border-radius:16px;background:var(--fog);overflow:hidden;aspect-ratio:16/10;position:relative}
+  .shot svg{position:absolute;inset:0;width:100%;height:100%}
+  .project-body{padding:8px 12px 8px 0}
+  .project:nth-child(even) .project-body{padding:8px 0 8px 12px}
+  .ptype{display:inline-flex;font-size:.88rem;font-weight:600;color:var(--ink);background:var(--signal);padding:4px 12px;border-radius:999px}
+  .project h3{font-size:2rem;font-weight:700;margin-top:16px}
+  .project p{color:var(--steel);margin-top:10px}
+  .features{list-style:none;margin-top:20px;display:grid;gap:8px}
+  .features li{display:flex;gap:12px;align-items:flex-start}
+  .features li::before{content:"";flex:none;width:7px;height:7px;border-radius:2px;background:var(--signal-deep);margin-top:10px;transform:rotate(45deg)}
+  .project .btn{margin-top:26px}
+  .url{display:block;margin-top:10px;font-size:.92rem;color:var(--steel)}
+  .more{margin-top:40px;text-align:center;color:var(--steel)}
+  .more a{font-weight:600;color:var(--ink)}
 
-  /* process */
   .process{background:var(--ink);color:#fff}
-  .process .lede{color:#AEB9C8}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;list-style:none;counter-reset:s}
+  .process .lede{color:var(--mist)}
+  .process .kicker{color:var(--signal)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;list-style:none;counter-reset:s}
   .steps li{padding:28px 28px 8px 0;border-top:2px solid #33405A;position:relative;counter-increment:s}
-  .steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1rem;width:34px;height:34px;border-radius:50%;background:var(--signal);color:var(--ink);display:grid;place-items:center;position:absolute;top:-18px;left:0}
+  .steps li::before{content:counter(s);font-family:var(--display);font-weight:800;width:36px;height:36px;border-radius:50%;background:var(--signal);color:var(--ink);display:grid;place-items:center;position:absolute;top:-19px;left:0}
   .steps h3{font-size:1.3rem;margin-top:22px}
-  .steps p{color:#AEB9C8;margin-top:8px;font-size:.98rem}
+  .steps p{color:var(--mist);margin-top:8px;font-size:.98rem}
 
-  /* skills */
   .skills-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
   .skill-groups{display:grid;gap:28px}
-  .skill-groups h3{font-size:1.1rem;font-weight:700;font-family:var(--body);letter-spacing:0}
+  .skill-groups h3{font:600 1.05rem var(--body);letter-spacing:0}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
   .chips span{padding:8px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);font-weight:500;font-size:.95rem}
 
-  /* contact */
   .contact{background:var(--signal)}
+  .contact .kicker{color:var(--ink)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-  .contact h2{max-width:14ch}
   .contact .lede{color:#3D3415}
-  .direct{margin-top:32px;display:grid;gap:10px}
-  .direct a{font-weight:600;text-decoration:none;display:flex;gap:10px;align-items:center}
-  .direct a:hover{text-decoration:underline}
-  form{background:#fff;border-radius:20px;padding:32px;border:2px solid var(--ink)}
+  .wa-card{margin-top:32px;background:var(--ink);color:#fff;border-radius:20px;padding:24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .wa-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:3px solid var(--wa)}
+  .wa-card div{flex:1;min-width:160px}
+  .wa-card strong{display:block;font-family:var(--display);font-size:1.2rem}
+  .wa-card span{color:var(--mist);font-size:.95rem}
+  .wa-card .btn{flex:none}
+  form{background:#fff;border-radius:22px;padding:32px;border:2px solid var(--ink)}
+  form h3{font-size:1.4rem;margin-bottom:20px}
   label{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px}
   .field{margin-bottom:18px}
   input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink)}
   textarea{min-height:120px;resize:vertical}
-  .form-note{font-size:.9rem;color:var(--steel);margin-top:12px}
-  form .btn{width:100%;justify-content:center}
+  form .btn{width:100%}
+  .form-note{font-size:.9rem;color:var(--steel);margin-top:12px;text-align:center}
 
-  footer{padding:32px 0;font-size:.95rem;color:var(--steel)}
+  footer{padding:32px 0 100px;font-size:.95rem;color:var(--steel)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:600;padding:14px 20px 14px 16px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(18,140,70,.6);transition:transform .15s}
+  .wa-float:hover{transform:translateY(-2px)}
+  .wa-float svg{flex:none}
+
   @media (max-width:960px){
-    .hero-grid,.contact-grid,.skills-grid{grid-template-columns:1fr;gap:48px}
+    .hero-grid,.contact-grid,.skills-grid{grid-template-columns:1fr;gap:56px}
+    .portrait{justify-self:center;max-width:380px;margin-right:28px}
     .svc-grid{grid-template-columns:1fr}
     .svc + .svc{border-left:0;border-top:2px solid var(--ink)}
-    .work-grid{grid-template-columns:1fr 1fr}
-    .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+    .project{grid-template-columns:1fr;gap:28px}
+    .project:nth-child(even) .shot{order:0}
+    .project-body,.project:nth-child(even) .project-body{padding:0 4px 4px}
+    .steps{grid-template-columns:1fr 1fr;row-gap:44px}
   }
   @media (max-width:720px){
     .wrap{padding:0 16px}
     section{padding:80px 0}
-    .hero{padding:56px 0 72px}
+    .hero{padding:48px 0 80px}
     .menu-toggle{display:block}
-    .nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:0;padding:8px 16px 20px;border-bottom:1px solid var(--line)}
+    .nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 20px;border-bottom:1px solid var(--line)}
     .nav ul.open{display:flex}
-    .nav ul li{width:100%}
     .nav ul a{display:block;padding:12px 0}
+    .nav ul .btn{margin-top:8px;padding:12px}
+    .portrait{max-width:290px}
+    .portrait::after{right:-34px}
+    .name-card{left:-12px;bottom:20px}
     .svc{padding:28px 22px}
-    .work-grid,.steps{grid-template-columns:1fr}
+    .project{padding:16px}
+    .project h3{font-size:1.6rem}
+    .steps{grid-template-columns:1fr}
     form{padding:22px}
+    .wa-float span{display:none}
+    .wa-float{padding:15px;right:16px;bottom:16px}
   }
   @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
+    *{transition:none!important}
     html{scroll-behavior:auto}
   }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.3-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.2-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.58 1.97 1.09.97 2 1.27 2.29 1.41.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.21.55.33.07.12.07.7-.17 1.37z"/></symbol>
+  <symbol id="ext-icon" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" fill="none" stroke="#B98C08" stroke-width="3"/></symbol>
+</svg>
+
 <header>
   <nav class="wrap nav" aria-label="Main">
-    <a href="#top" class="brand"><span class="brand-mark"><span></span></span>Nouman Naseer</a>
+    <a href="#top" class="brand"><span class="brand-mark">N</span>Nouman Naseer</a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
     <ul id="menu">
       <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">Projects</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact" class="btn btn-solid">Start a project</a></li>
+      <li><a href="#contact" class="btn btn-solid">Hire me</a></li>
     </ul>
   </nav>
 </header>
@@ -207,85 +212,60 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="availability"><i></i>Taking new projects this month</div>
-        <h1>I build the tools that save you hours, and the websites that win you customers.</h1>
-        <p class="lede">I'm Nouman, a developer who turns slow, manual work into simple custom tools, and turns ideas into fast websites that look good on every screen.</p>
+        <div class="availability"><i></i>Available for freelance projects</div>
+        <h1>Custom tools and websites, built around how your business works.</h1>
+        <p class="lede">I'm Nouman Naseer, a full-stack developer. I build business software like CRMs, dispatch and POS systems, and professional websites that load fast and work on every screen.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-solid">Start a project</a>
-          <a href="#work" class="btn btn-ghost">See my work</a>
+          <a href="#work" class="btn btn-solid">View my projects</a>
+          <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#wa-icon"/></svg>Chat on WhatsApp</a>
+        </div>
+        <div class="proof">
+          <div><strong>Business tools</strong><span>CRM, DMS, POS</span></div>
+          <div><strong>Websites</strong><span>Responsive and fast</span></div>
+          <div><strong>2 live projects</strong><span><a href="#work">See them below</a></span></div>
         </div>
       </div>
 
-      <div class="bench" data-mode="tools">
-        <div class="switch" role="tablist" aria-label="What I build">
-          <span class="knob" aria-hidden="true"></span>
-          <button role="tab" id="tab-tools" aria-selected="true" aria-controls="p-tools" data-mode="tools">Custom tools</button>
-          <button role="tab" id="tab-web" aria-selected="false" aria-controls="p-web" data-mode="web" tabindex="-1">Websites</button>
-        </div>
-        <div class="screen">
-          <div class="panel on" id="p-tools" role="tabpanel" aria-labelledby="tab-tools">
-            <div class="task"><s>Copy orders into a spreadsheet</s><b>Automatic</b></div>
-            <div class="task"><s>Write the weekly report by hand</s><b>1 click</b></div>
-            <div class="task"><s>Resize and rename 300 images</s><b>12 sec</b></div>
-            <div class="task"><s>Check prices on 5 sites daily</s><b>Alerts</b></div>
-            <div class="saved"><span>Time a typical client gets back each week</span><strong>10+ hrs</strong></div>
-          </div>
-          <div class="panel" id="p-web" role="tabpanel" aria-labelledby="tab-web" hidden>
-            <div class="browser">
-              <div class="browser-bar"><i></i><i></i><i></i><em>yourbusiness.com</em></div>
-              <div class="browser-body">
-                <div class="mock-h"></div>
-                <div class="mock-p"></div>
-                <div class="mock-p" style="width:80%"></div>
-                <span class="mock-btn"></span>
-                <div class="mock-row"><div></div><div></div><div></div></div>
-              </div>
-            </div>
-            <div class="scores" aria-label="Typical site quality scores">
-              <div class="score"><b>95+</b><span>Speed</span></div>
-              <div class="score"><b>100</b><span>Mobile</span></div>
-              <div class="score"><b>100</b><span>SEO basics</span></div>
-            </div>
-          </div>
-        </div>
+      <div class="portrait">
+        <img src="assets/nouman.jpg" alt="Portrait of Nouman Naseer" width="860" height="1121">
+        <div class="name-card"><strong>Nouman Naseer</strong><span>Full-stack developer</span></div>
       </div>
     </div>
   </section>
 
   <section class="services" id="services">
     <div class="wrap">
+      <span class="kicker">What I offer</span>
       <h2>Two services, one goal: less busywork, more business.</h2>
-      <p class="lede">Pick one, or combine them. Many clients start with a website and come back for a tool that runs the boring parts behind it.</p>
+      <p class="lede">Hire me for one or both. Many clients start with a website and come back for a tool that handles the work behind it.</p>
 
       <div class="svc-grid">
         <article class="svc">
           <div class="svc-ico" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#17202E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3-6.5-6.5 8-8z"/><path d="M14.7 6.3 17 4"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16202D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3-6.5-6.5 8-8z"/><path d="M14.7 6.3 17 4"/></svg>
           </div>
           <h3>Custom tools</h3>
-          <p>Software made for exactly how you work, so repetitive jobs run themselves.</p>
+          <p>Software made for exactly how your team works, so daily jobs take minutes instead of hours.</p>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Automation scripts</strong><span>Data entry, file handling, emails and reports done automatically.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Web scrapers and data tools</strong><span>Collect prices, leads or listings and get them in a clean sheet.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Dashboards and admin panels</strong><span>See your numbers in one place instead of five spreadsheets.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Browser extensions and bots</strong><span>Chrome extensions, Telegram and WhatsApp bots, API integrations.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>CRM and lead management</strong><span>Track leads, calls and follow-ups with role-based access for your team.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>POS and billing systems</strong><span>Orders, bills and daily sales for shops, hotels and restaurants.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Dashboards and admin panels</strong><span>See all your numbers in one place instead of five spreadsheets.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Automation and integrations</strong><span>Scripts, bots and API connections that remove repetitive work.</span></div></li>
           </ul>
-          <div class="svc-foot"><strong>Typical timeline:</strong> 3 days to 3 weeks, depending on scope.</div>
         </article>
 
         <article class="svc">
           <div class="svc-ico" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#17202E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="m9 13-2 2 2 2M15 13l2 2-2 2"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16202D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="m9 13-2 2 2 2M15 13l2 2-2 2"/></svg>
           </div>
           <h3>Website development</h3>
-          <p>Fast, mobile-first websites that explain what you do and turn visitors into enquiries.</p>
+          <p>Professional, mobile-first websites that explain what you do and turn visitors into customers.</p>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Business and portfolio sites</strong><span>Clear pages, contact forms and Google-friendly structure.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Landing pages</strong><span>One focused page for a product, offer or ad campaign.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Online stores</strong><span>Product pages, cart and payments that are easy to manage.</span></div></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A0C" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg><div><strong>Web apps</strong><span>Logins, user accounts and databases when a site needs to do more.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Business and portfolio sites</strong><span>Clear pages, contact options and search-friendly structure.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Landing pages</strong><span>One focused page for a product, offer or ad campaign.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Online stores</strong><span>Product pages, cart and checkout that are easy to manage.</span></div></li>
+            <li><svg width="18" height="18"><use href="#check"/></svg><div><strong>Web apps</strong><span>Logins, user roles and databases when a site needs to do more.</span></div></li>
           </ul>
-          <div class="svc-foot"><strong>Typical timeline:</strong> 1 to 4 weeks, including revisions.</div>
         </article>
       </div>
     </div>
@@ -293,75 +273,92 @@
 
   <section id="work">
     <div class="wrap">
-      <div class="work-head">
-        <div>
-          <h2>Recent work</h2>
-          <p class="lede">A few projects that show the kind of problems I solve.</p>
-        </div>
-        <div class="filters" role="group" aria-label="Filter projects">
-          <button aria-pressed="true" data-f="all">All</button>
-          <button aria-pressed="false" data-f="tool">Tools</button>
-          <button aria-pressed="false" data-f="web">Websites</button>
-        </div>
-      </div>
+      <span class="kicker">Featured projects</span>
+      <h2>Live projects you can open and try.</h2>
+      <p class="lede">Real software that's online now.</p>
 
-      <!-- Replace these sample projects with your own: title, text, stack and (optionally) a screenshot inside .thumb -->
-      <div class="work-grid">
-        <article class="project" data-k="tool">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="50" width="320" height="200" rx="12" fill="#17202E"/><rect x="64" y="80" width="120" height="10" rx="5" fill="#F2C230"/><g fill="#56657A"><rect x="64" y="112" width="272" height="8" rx="4"/><rect x="64" y="132" width="232" height="8" rx="4"/><rect x="64" y="152" width="252" height="8" rx="4"/></g><rect x="64" y="190" width="90" height="30" rx="8" fill="#F2C230"/></svg></div>
-          <span class="tag">Custom tool</span>
-          <h3>Order sync automation</h3>
-          <p>Pulls new store orders into Google Sheets and emails a daily summary.</p>
-          <div class="stack"><span>Python</span><span>Google Sheets API</span></div>
+      <div class="projects">
+        <article class="project">
+          <a class="shot" href="https://dispatchlink.online/" target="_blank" rel="noopener" aria-label="Open Dispatch Link">
+            <svg viewBox="0 0 640 400" aria-hidden="true">
+              <rect width="640" height="400" fill="#E8ECF0"/>
+              <rect x="40" y="36" width="560" height="328" rx="14" fill="#fff" stroke="#D3DAE2"/>
+              <rect x="40" y="36" width="130" height="328" rx="14" fill="#16202D"/>
+              <rect x="150" y="36" width="20" height="328" fill="#16202D"/>
+              <rect x="60" y="60" width="70" height="12" rx="6" fill="#F2C230"/>
+              <rect x="54" y="94" width="104" height="22" rx="6" fill="#F2C230" opacity=".22"/>
+              <g fill="#4A5970"><rect x="62" y="100" width="80" height="10" rx="5"/><rect x="62" y="132" width="70" height="10" rx="5"/><rect x="62" y="158" width="78" height="10" rx="5"/><rect x="62" y="184" width="62" height="10" rx="5"/></g>
+              <rect x="196" y="60" width="150" height="14" rx="7" fill="#16202D"/>
+              <rect x="196" y="92" width="120" height="64" rx="10" fill="#F6F7F9" stroke="#D3DAE2"/><rect x="210" y="106" width="50" height="8" rx="4" fill="#566479"/><rect x="210" y="124" width="70" height="16" rx="5" fill="#16202D"/>
+              <rect x="330" y="92" width="120" height="64" rx="10" fill="#F6F7F9" stroke="#D3DAE2"/><rect x="344" y="106" width="50" height="8" rx="4" fill="#566479"/><rect x="344" y="124" width="60" height="16" rx="5" fill="#16202D"/>
+              <rect x="464" y="92" width="116" height="64" rx="10" fill="#F2C230"/><rect x="478" y="106" width="50" height="8" rx="4" fill="#16202D" opacity=".5"/><rect x="478" y="124" width="54" height="16" rx="5" fill="#16202D"/>
+              <rect x="196" y="176" width="384" height="168" rx="10" fill="#F6F7F9" stroke="#D3DAE2"/>
+              <g fill="#D3DAE2"><rect x="196" y="210" width="384" height="1"/><rect x="196" y="244" width="384" height="1"/><rect x="196" y="278" width="384" height="1"/><rect x="196" y="312" width="384" height="1"/></g>
+              <g fill="#566479"><rect x="212" y="190" width="70" height="8" rx="4"/><rect x="212" y="223" width="90" height="8" rx="4"/><rect x="212" y="257" width="76" height="8" rx="4"/><rect x="212" y="291" width="96" height="8" rx="4"/><rect x="212" y="325" width="64" height="8" rx="4"/></g>
+              <rect x="500" y="220" width="62" height="16" rx="8" fill="#2FA84F" opacity=".3"/><rect x="500" y="254" width="62" height="16" rx="8" fill="#F2C230" opacity=".6"/><rect x="500" y="288" width="62" height="16" rx="8" fill="#2FA84F" opacity=".3"/><rect x="500" y="322" width="62" height="16" rx="8" fill="#566479" opacity=".2"/>
+            </svg>
+          </a>
+          <div class="project-body">
+            <span class="ptype">Business tool</span>
+            <h3>Dispatch Link</h3>
+            <p>One workspace that combines a lead-calling CRM with a dispatch management system, so sales and dispatch teams work from the same place.</p>
+            <ul class="features">
+              <li>CRM and dispatch management (DMS) in one platform</li>
+              <li>Role-based access for admins, sales agents and dispatchers</li>
+              <li>Company ID login so each business manages its own team</li>
+            </ul>
+            <a class="btn btn-solid" href="https://dispatchlink.online/" target="_blank" rel="noopener">Visit live site<svg width="16" height="16" aria-hidden="true"><use href="#ext-icon"/></svg></a>
+            <span class="url">dispatchlink.online</span>
+          </div>
         </article>
-        <article class="project" data-k="web">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="40" width="320" height="220" rx="12" fill="#fff" stroke="#CBD3DC"/><rect x="40" y="40" width="320" height="26" rx="12" fill="#E6EAEE"/><rect x="66" y="90" width="170" height="16" rx="5" fill="#17202E"/><rect x="66" y="118" width="130" height="8" rx="4" fill="#CBD3DC"/><rect x="66" y="144" width="80" height="24" rx="6" fill="#F2C230"/><rect x="250" y="88" width="88" height="80" rx="8" fill="#E6EAEE"/><g fill="#E6EAEE"><rect x="66" y="190" width="84" height="46" rx="6"/><rect x="158" y="190" width="84" height="46" rx="6"/><rect x="250" y="190" width="88" height="46" rx="6"/></g></svg></div>
-          <span class="tag">Website</span>
-          <h3>Restaurant website</h3>
-          <p>Menu, location and table booking, built mobile-first for quick loading.</p>
-          <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </article>
-        <article class="project" data-k="tool">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="50" width="320" height="200" rx="12" fill="#fff" stroke="#CBD3DC"/><g fill="#F2C230"><rect x="76" y="170" width="34" height="50" rx="4"/><rect x="126" y="140" width="34" height="80" rx="4"/><rect x="176" y="110" width="34" height="110" rx="4"/></g><g fill="#17202E"><rect x="226" y="125" width="34" height="95" rx="4"/><rect x="276" y="90" width="34" height="130" rx="4"/></g><rect x="76" y="74" width="110" height="10" rx="5" fill="#17202E"/></svg></div>
-          <span class="tag">Custom tool</span>
-          <h3>Sales dashboard</h3>
-          <p>One screen showing daily sales, top products and stock alerts.</p>
-          <div class="stack"><span>React</span><span>Node.js</span><span>Chart.js</span></div>
-        </article>
-        <article class="project" data-k="web">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="40" width="320" height="220" rx="12" fill="#17202E"/><rect x="70" y="80" width="200" height="20" rx="6" fill="#fff"/><rect x="70" y="112" width="150" height="8" rx="4" fill="#56657A"/><rect x="70" y="140" width="96" height="28" rx="7" fill="#F2C230"/><g fill="#273245"><rect x="70" y="194" width="80" height="40" rx="6"/><rect x="160" y="194" width="80" height="40" rx="6"/><rect x="250" y="194" width="80" height="40" rx="6"/></g></svg></div>
-          <span class="tag">Website</span>
-          <h3>Product landing page</h3>
-          <p>A single page for a launch, with a signup form and clear pricing.</p>
-          <div class="stack"><span>Next.js</span><span>Tailwind</span></div>
-        </article>
-        <article class="project" data-k="tool">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="110" y="40" width="180" height="220" rx="18" fill="#17202E"/><rect x="130" y="80" width="110" height="30" rx="10" fill="#273245"/><rect x="160" y="122" width="110" height="30" rx="10" fill="#F2C230"/><rect x="130" y="164" width="120" height="30" rx="10" fill="#273245"/><rect x="160" y="206" width="90" height="30" rx="10" fill="#F2C230"/></svg></div>
-          <span class="tag">Custom tool</span>
-          <h3>Customer support bot</h3>
-          <p>Answers common questions on WhatsApp and hands harder ones to a person.</p>
-          <div class="stack"><span>Node.js</span><span>WhatsApp API</span></div>
-        </article>
-        <article class="project" data-k="web">
-          <div class="thumb"><svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="40" width="320" height="220" rx="12" fill="#fff" stroke="#CBD3DC"/><g fill="#E6EAEE"><rect x="64" y="70" width="80" height="80" rx="8"/><rect x="160" y="70" width="80" height="80" rx="8"/><rect x="256" y="70" width="80" height="80" rx="8"/></g><g fill="#17202E"><rect x="64" y="162" width="60" height="8" rx="4"/><rect x="160" y="162" width="60" height="8" rx="4"/><rect x="256" y="162" width="60" height="8" rx="4"/></g><g fill="#F2C230"><rect x="64" y="182" width="40" height="18" rx="5"/><rect x="160" y="182" width="40" height="18" rx="5"/><rect x="256" y="182" width="40" height="18" rx="5"/></g></svg></div>
-          <span class="tag">Website</span>
-          <h3>Clothing store</h3>
-          <p>Online shop with product filters, cart and cash-on-delivery checkout.</p>
-          <div class="stack"><span>WordPress</span><span>WooCommerce</span></div>
+
+        <article class="project">
+          <a class="shot" href="https://nauman044.github.io/Hotel" target="_blank" rel="noopener" aria-label="Open Hotel POS">
+            <svg viewBox="0 0 640 400" aria-hidden="true">
+              <rect width="640" height="400" fill="#16202D"/>
+              <rect x="40" y="36" width="370" height="328" rx="14" fill="#223044"/>
+              <rect x="62" y="58" width="120" height="14" rx="7" fill="#fff"/>
+              <rect x="62" y="88" width="62" height="22" rx="11" fill="#F2C230"/><rect x="132" y="88" width="62" height="22" rx="11" fill="#33405A"/><rect x="202" y="88" width="62" height="22" rx="11" fill="#33405A"/>
+              <g id="tile"><rect x="62" y="126" width="104" height="104" rx="12" fill="#2C3B52"/><circle cx="114" cy="162" r="22" fill="#3B4C66"/><rect x="74" y="198" width="60" height="8" rx="4" fill="#fff"/><rect x="74" y="212" width="36" height="8" rx="4" fill="#F2C230"/></g>
+              <use href="#tile" x="116"/><use href="#tile" x="232"/>
+              <use href="#tile" y="116"/><use href="#tile" x="116" y="116"/><use href="#tile" x="232" y="116"/>
+              <rect x="426" y="36" width="174" height="328" rx="14" fill="#fff"/>
+              <rect x="444" y="58" width="90" height="12" rx="6" fill="#16202D"/>
+              <g fill="#D3DAE2"><rect x="444" y="92" width="138" height="1"/><rect x="444" y="128" width="138" height="1"/><rect x="444" y="164" width="138" height="1"/><rect x="444" y="200" width="138" height="1"/></g>
+              <g fill="#566479"><rect x="444" y="104" width="70" height="8" rx="4"/><rect x="444" y="140" width="80" height="8" rx="4"/><rect x="444" y="176" width="60" height="8" rx="4"/></g>
+              <g fill="#16202D"><rect x="550" y="104" width="32" height="8" rx="4"/><rect x="550" y="140" width="32" height="8" rx="4"/><rect x="550" y="176" width="32" height="8" rx="4"/></g>
+              <rect x="444" y="268" width="50" height="10" rx="5" fill="#566479"/><rect x="530" y="264" width="52" height="16" rx="5" fill="#16202D"/>
+              <rect x="444" y="304" width="138" height="40" rx="10" fill="#F2C230"/>
+            </svg>
+          </a>
+          <div class="project-body">
+            <span class="ptype">Business tool</span>
+            <h3>Hotel POS</h3>
+            <p>A point-of-sale web app for hotels and restaurants that runs in the browser, with nothing to install.</p>
+            <ul class="features">
+              <li>Quick order taking from a menu screen</li>
+              <li>Bill calculation and checkout</li>
+              <li>Works on desktop, tablet and phone</li>
+            </ul>
+            <a class="btn btn-solid" href="https://nauman044.github.io/Hotel" target="_blank" rel="noopener">Visit live site<svg width="16" height="16" aria-hidden="true"><use href="#ext-icon"/></svg></a>
+            <span class="url">nauman044.github.io/Hotel</span>
+          </div>
         </article>
       </div>
+      <p class="more">More of my code is on <a href="https://github.com/nauman044" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
   </section>
 
   <section class="process" id="process">
     <div class="wrap">
-      <h2>How a project goes</h2>
-      <p class="lede">Clear steps, regular updates, and no surprises on price.</p>
+      <span class="kicker">How I work</span>
+      <h2>A clear process from first message to launch.</h2>
+      <p class="lede">Regular updates, a fixed price agreed upfront, and support after delivery.</p>
       <ol class="steps">
-        <li><h3>Talk</h3><p>You tell me the problem or the site you need. I ask questions until it's clear.</p></li>
+        <li><h3>Discuss</h3><p>You tell me what you need. I ask questions until the requirements are clear.</p></li>
         <li><h3>Plan and quote</h3><p>You get a written scope, a fixed price and a delivery date.</p></li>
         <li><h3>Build</h3><p>I share progress as I go, so you can give feedback early.</p></li>
-        <li><h3>Launch and support</h3><p>I set it live, show you how to use it, and fix any issues for 30 days.</p></li>
+        <li><h3>Launch and support</h3><p>I put it live, show you how to use it, and fix any issues for 30 days.</p></li>
       </ol>
     </div>
   </section>
@@ -369,13 +366,14 @@
   <section id="skills">
     <div class="wrap skills-grid">
       <div>
+        <span class="kicker">Tech stack</span>
         <h2>What I work with</h2>
-        <p class="lede">I choose the simplest tech that does the job well, so your project stays easy and cheap to maintain.</p>
+        <p class="lede">I pick the simplest technology that does the job well, so your project stays easy and affordable to maintain.</p>
       </div>
       <div class="skill-groups">
-        <div><h3>Websites</h3><div class="chips"><span>HTML & CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>WordPress</span></div></div>
-        <div><h3>Tools and backend</h3><div class="chips"><span>Python</span><span>Node.js</span><span>REST APIs</span><span>Web scraping</span><span>Chrome extensions</span></div></div>
-        <div><h3>Data and hosting</h3><div class="chips"><span>MySQL</span><span>MongoDB</span><span>Firebase</span><span>Google Sheets API</span><span>Vercel</span><span>Git</span></div></div>
+        <div><h3>Frontend</h3><div class="chips"><span>HTML & CSS</span><span>JavaScript</span><span>React</span><span>Tailwind CSS</span><span>Responsive design</span></div></div>
+        <div><h3>Backend and tools</h3><div class="chips"><span>Node.js</span><span>Python</span><span>REST APIs</span><span>Authentication and roles</span><span>Automation</span></div></div>
+        <div><h3>Data and hosting</h3><div class="chips"><span>MySQL</span><span>MongoDB</span><span>Firebase</span><span>GitHub Pages</span><span>Git</span></div></div>
       </div>
     </div>
   </section>
@@ -383,30 +381,29 @@
   <section class="contact" id="contact">
     <div class="wrap contact-grid">
       <div>
-        <h2>Have a project in mind?</h2>
-        <p class="lede">Tell me what you need. I reply within 24 hours with questions or a quote.</p>
-        <div class="direct">
-          <!-- Replace with your real email, WhatsApp number and profiles -->
-          <a href="mailto:your@email.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>your@email.com</a>
-          <a href="https://wa.me/920000000000"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>WhatsApp</a>
-          <a href="https://github.com/"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg>GitHub</a>
-          <a href="https://www.linkedin.com/"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>LinkedIn</a>
+        <span class="kicker">Contact</span>
+        <h2>Let's build something for your business.</h2>
+        <p class="lede">Send me a message about your project. I usually reply the same day.</p>
+        <div class="wa-card">
+          <img src="assets/nouman.jpg" alt="">
+          <div><strong>Message me on WhatsApp</strong><span>+92 370 0684849</span></div>
+          <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#wa-icon"/></svg>Open chat</a>
         </div>
       </div>
       <form id="contact-form">
+        <h3>Tell me about your project</h3>
         <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
-        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
         <div class="field"><label for="type">What do you need?</label>
           <select id="type" name="type">
-            <option>A custom tool or automation</option>
+            <option>A custom tool (CRM, POS, dashboard, automation)</option>
             <option>A new website</option>
             <option>Both</option>
             <option>Not sure yet</option>
           </select>
         </div>
-        <div class="field"><label for="msg">Tell me about it</label><textarea id="msg" name="msg" required placeholder="What should it do? Any deadline or budget?"></textarea></div>
-        <button class="btn btn-solid" type="submit">Send message</button>
-        <p class="form-note">This opens your email app with the message filled in.</p>
+        <div class="field"><label for="msg">Project details</label><textarea id="msg" name="msg" required placeholder="What should it do? Any deadline or budget?"></textarea></div>
+        <button class="btn btn-wa" type="submit"><svg width="18" height="18" aria-hidden="true"><use href="#wa-icon"/></svg>Send on WhatsApp</button>
+        <p class="form-note">Opens WhatsApp with your message ready to send.</p>
       </form>
     </div>
   </section>
@@ -414,48 +411,31 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Nouman Naseer</span>
+    <span>© <span id="yr"></span> Nouman Naseer. All rights reserved.</span>
     <span>Custom tools and website development</span>
   </div>
 </footer>
 
-<script>
-  // Contact email used by the form — replace with your own
-  const CONTACT_EMAIL = "your@email.com";
+<a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with Nouman on WhatsApp">
+  <svg width="26" height="26" aria-hidden="true"><use href="#wa-icon"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
 
-  // hero switch
-  const bench = document.querySelector('.bench');
-  const tabs = bench.querySelectorAll('[role="tab"]');
-  function setMode(mode){
-    bench.dataset.mode = mode;
-    tabs.forEach(t=>{
-      const on = t.dataset.mode === mode;
-      t.setAttribute('aria-selected', on);
-      t.tabIndex = on ? 0 : -1;
-      const p = document.getElementById(t.getAttribute('aria-controls'));
-      p.hidden = !on; p.classList.toggle('on', on);
-    });
-  }
-  tabs.forEach(t=>{
-    t.addEventListener('click', ()=>setMode(t.dataset.mode));
-    t.addEventListener('keydown', e=>{
-      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-        const next = t.dataset.mode==='tools'?'web':'tools';
-        setMode(next); bench.querySelector(`[data-mode="${next}"][role="tab"]`).focus();
-      }
-    });
+<script>
+  // WhatsApp number in international format (0370... -> 92370...)
+  const WA_NUMBER = "923700684849";
+  const waLink = text => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+  document.querySelectorAll('[data-wa]').forEach(a=>{
+    a.href = waLink("Hi Nouman, I saw your portfolio and would like to discuss a project.");
   });
 
-  // project filter
-  const fbtns = document.querySelectorAll('.filters button');
-  fbtns.forEach(b=>b.addEventListener('click',()=>{
-    fbtns.forEach(x=>x.setAttribute('aria-pressed', x===b));
-    document.querySelectorAll('.project').forEach(p=>{
-      p.hidden = !(b.dataset.f==='all' || p.dataset.k===b.dataset.f);
-    });
-  }));
+  document.getElementById('contact-form').addEventListener('submit', e=>{
+    e.preventDefault();
+    const f = e.target;
+    const text = `Hi Nouman, I'm ${f.name.value}.\nI need: ${f.type.value}\n\n${f.msg.value}`;
+    window.open(waLink(text), '_blank', 'noopener');
+  });
 
-  // mobile menu
   const toggle = document.querySelector('.menu-toggle'), menu = document.getElementById('menu');
   toggle.addEventListener('click',()=>{
     const open = menu.classList.toggle('open');
@@ -465,15 +445,6 @@
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
     menu.classList.remove('open'); toggle.setAttribute('aria-expanded',false); toggle.textContent='Menu';
   }));
-
-  // contact form -> mailto
-  document.getElementById('contact-form').addEventListener('submit', e=>{
-    e.preventDefault();
-    const f = e.target;
-    const subject = `New project: ${f.type.value}`;
-    const body = `Name: ${f.name.value}\nEmail: ${f.email.value}\nNeed: ${f.type.value}\n\n${f.msg.value}`;
-    location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
 
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
